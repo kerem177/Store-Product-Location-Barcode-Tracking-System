@@ -1,0 +1,6 @@
+@DeFactoRetailAPI_HostAddress = http://localhost:5206
+
+GET {{DeFactoRetailAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

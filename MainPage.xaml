@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DeFactoSmartShop.MainPage"
+             BackgroundColor="#F8F9FA">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="25" VerticalOptions="Center">
+
+            <Image Source="dotnet_bot.png" HeightRequest="80" HorizontalOptions="Center" />
+            <Label Text="DeFacto SmartShop" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#111111" />
+            <Label Text="Kabinden Dönen Ürün Bulucu" FontSize="14" HorizontalOptions="Center" TextColor="#666666" Margin="0,-15,0,0" />
+
+            <Frame BackgroundColor="White" BorderColor="#E0E0E0" CornerRadius="10" Padding="5,0">
+                <Entry x:Name="TxtBarkod" Placeholder="Ürün Barkodunu Giriniz veya Okutunuz" Keyboard="Numeric" FontSize="16" HeightRequest="50" HorizontalTextAlignment="Center" />
+            </Frame>
+
+            <Button x:Name="BtnSorgula" Text="ÜRÜNÜN YERİNİ BUL" Clicked="BtnSorgula_Clicked" BackgroundColor="#007A33" TextColor="White" FontAttributes="Bold" HeightRequest="50" CornerRadius="10" />
+
+            <Border x:Name="ResultFrame" IsVisible="False" BackgroundColor="White" Stroke="#007A33" StrokeThickness="2" Padding="20">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="12"/>
+                </Border.StrokeShape>
+
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="ÜRÜN KONUM BİLGİSİ" FontSize="12" FontAttributes="Bold" TextColor="#007A33" HorizontalOptions="Center" />
+
+                    <BoxView HeightRequest="1" BackgroundColor="#E0E0E0" />
+
+                    <Label x:Name="LblUrunAdi" Text="Ürün Adı" FontSize="16" FontAttributes="Bold" TextColor="#222222" HorizontalOptions="Center" HorizontalTextAlignment="Center" />
+                    <Label x:Name="LblGrupAdi" Text="Grup" FontSize="14" TextColor="#555555" HorizontalOptions="Center" />
+
+                    <Frame BackgroundColor="#E8F5E9" CornerRadius="8" Padding="15" HorizontalOptions="Center">
+                        <Label x:Name="LblStandKodu" Text="STAND-X" FontSize="24" FontAttributes="Bold" TextColor="#007A33" HorizontalOptions="Center" />
+                    </Frame>
+
+                    <Label x:Name="LblAciklama" Text="Açıklama" FontSize="13" TextColor="#666666" HorizontalOptions="Center" HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

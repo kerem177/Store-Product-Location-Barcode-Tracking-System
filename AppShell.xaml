@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="DeFactoSmartShop.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DeFactoSmartShop"
+    Shell.FlyoutBehavior="Disabled"
+    Title="DeFacto SmartShop">
+
+    <TabBar>
+        <Tab Title="Ürün Konumu Bul" Icon="dotnet_bot.png">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+
+        <Tab Title="Konum Güncelle" Icon="dotnet_bot.png">
+            <ShellContent ContentTemplate="{DataTemplate local:GuncellePage}" />
+        </Tab>
+    </TabBar>
+
+</Shell>

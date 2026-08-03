@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DeFactoSmartShop.GuncellePage"
+             BackgroundColor="#F8F9FA"
+             Title="Konum Güncelleme">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="25" VerticalOptions="Center">
+
+            <Label Text="Görsel Düzenleme Paneli" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#111111" />
+            <Label Text="Ürün gruplarının stand yerini buradan güncelleyin" FontSize="13" HorizontalOptions="Center" TextColor="#666666" Margin="0,-15,0,0" />
+
+            <VerticalStackLayout Spacing="5">
+                <Label Text="1. Ürün Grubunu Seçiniz:" FontAttributes="Bold" TextColor="#333333" />
+                <Frame BackgroundColor="White" BorderColor="#E0E0E0" CornerRadius="10" Padding="10,0">
+                    <Picker x:Name="PckUrunGrubu" Title="Grup Seçmek İçin Tıklayın" HeightRequest="50" />
+                </Frame>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="5">
+                <Label Text="2. Yeni Mağaza İçi Standı Seçiniz:" FontAttributes="Bold" TextColor="#333333" />
+                <Frame BackgroundColor="White" BorderColor="#E0E0E0" CornerRadius="10" Padding="10,0">
+                    <Picker x:Name="PckStand" Title="Yeni Standı Seçmek İçin Tıklayın" HeightRequest="50" />
+                </Frame>
+            </VerticalStackLayout>
+
+            <Button x:Name="BtnGuncelle" Text="STAND KONUMUNU GÜNCELLE" Clicked="BtnGuncelle_Clicked" BackgroundColor="#007A33" TextColor="White" FontAttributes="Bold" HeightRequest="50" CornerRadius="10" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
